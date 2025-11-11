@@ -1,0 +1,87 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+  body { 
+    background: linear-gradient(90deg, #003366, #004080, #0059b3, #0073e6); 
+    min-height:100vh; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    padding:20px;
+  }
+
+  .wrapper {
+    background:#fff; 
+    border-radius:15px; 
+    max-width:420px; 
+    width:100%; 
+    padding:25px; 
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+  }
+
+  h2 { 
+    text-align:center; 
+    color:#003366; 
+    margin-bottom:20px; 
+    font-size:28px;
+  }
+
+  #map { 
+    height: 250px; 
+    width: 100%; 
+    border-radius:10px; 
+    border:1px solid #ccc;
+    margin-bottom:15px;
+  }
+
+  #coordinates { 
+    font-size: 0.9em; 
+    color: #555; 
+    margin-bottom:10px; 
+  }
+
+  #undo-pin {
+    width:100%;
+    background:#f44336;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-bottom:15px;
+  }
+
+  input[type="file"], textarea {
+    width:100%; 
+    padding:10px; 
+    border-radius:10px; 
+    border:1px solid #ccc; 
+    margin-bottom:15px;
+    font-size:14px;
+  }
+
+  textarea { resize:vertical; min-height:80px; }
+
+  #image-preview { width:100%; margin-bottom:15px; border-radius:10px; display:none; border:1px solid #ccc; }
+
+  #submit-report {
+    width:100%;
+    background: linear-gradient(90deg, #003366, #004080, #0059b3, #0073e6);
+    color:white;
+    border:none;
+    padding:12px;
+    font-size:16px;
+    font-weight:600;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+  }
+  #submit-report:hover { opacity:0.9; }
+
+  /* Pin sidebar (optional for mobile) */
+  #sidebar { display:flex; justify-content:center; margin-bottom:15px; }
+  #sidebar img { width:40px; cursor:grab; }
+
+  @media(max-width:480px){
+    .wrapper { padding:20px; }
+    h2 { font-size:24px; }
+    #map { height:200px; }
+  }

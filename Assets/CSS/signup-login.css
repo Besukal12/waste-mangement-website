@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Poppins', sans-serif; 
+}
+body { 
+  height: 100vh; 
+  display: grid; 
+  align-items: center;   
+  justify-items: center; 
+  background: linear-gradient(90deg, #003366, #004080, #0059b3, #0073e6); 
+}
+
+.wrapper {
+  max-width: 390px;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.title-text {
+  display: flex;
+  width: 200%;
+}
+.title {
+  width: 50%;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.slide-controls {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  margin: 20px 0 10px;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.slide {
+  flex: 1;
+  text-align: center;
+  line-height: 48px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+}
+.slider-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #003366, #004080, #0059b3, #0073e6);
+  transition: left 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  z-index: 0;
+}
+
+input[type="radio"] { 
+  display: none; 
+}
+
+.form-container { 
+  width: 100%; 
+  overflow: hidden; 
+}
+
+.form-inner {
+  display: flex;
+  width: 200%;
+  transform: translateX(0%);
+  transition: transform 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form {
+  width: 50%;
+  padding-top: 8px;
+  transition: all 0.6s ease;
+}
+
+.field { height: 50px; margin-top: 18px; }
+.field input {
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.25s;
+}
+.field input:focus { border-color: #1a75ff; }
+.field input::placeholder { color: #999; }
+
+.pass-link { margin-top: 8px; text-align: right; }
+.pass-link a, .signup-link a { color: #1a75ff; text-decoration: none; }
+.signup-link { margin-top: 20px; text-align: center; }
+
+.btn {
+  height: 50px;
+  margin-top: 18px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-layer {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  background: linear-gradient(90deg,#003366,#004080,#0059b3,#0073e6);
+  transition: left 0.4s ease;
+  border-radius: 15px;
+}
+.btn:hover .btn-layer { left: 0; }
+.btn input[type="submit"] {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+/* --- Mobile tweaks --- */
+@media (max-width: 420px) {
+  .wrapper { padding: 20px; }
+  .title { font-size: 28px; }
+  .field input { font-size: 14px; }
+  .btn input[type="submit"] { font-size: 16px; }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../Assets/CSS/blog.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../Assets/Images/logo.png" alt="zukal studio">
+            </div>
+            <div class="menu-icon" id="menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="About/index.html">About</a></li>
+                <li><a href="Blog/index.html">Blog</a></li>
+                <li><a href="Feedback/index.html">Feedback</a></li>
+                <li><button class="button">Log In</button></li>
+                <li><button class="button">Sign Up</button></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="blog-list"></div>
+
+
+    <script defer type="module" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="../Js/blog.js"></script>
+
+</body>
+</html>

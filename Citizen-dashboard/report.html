@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Waste Report</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/CSS/report.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <h2>Send Waste Report</h2>
+
+  <div id="sidebar">
+    <img id="red-pin" src="https://cdn-icons-png.flaticon.com/512/684/684908.png" draggable="true" alt="Drag Pin">
+  </div>
+
+  <div id="map"></div>
+  <div id="coordinates">Coordinates: N/A</div>
+  <button id="undo-pin">Remove Pin</button>
+  <input type="file" id="image" accept="image/*">
+  <img id="image-preview" alt="Image Preview">
+  <textarea id="description" placeholder="Describe the waste area"></textarea>
+  <button id="submit-report">Submit Report</button>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="../Js/citizen.js"></script>
+
+</body>
+</html>
