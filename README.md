@@ -1,1 +1,1 @@
-# it is my first readme
+# This is waste management system
