@@ -10,13 +10,25 @@
 <body>
   
   <div class="container">
-    <nav>
-      <ul>
-        <li><a href="report.html">report</a></li>
-      </ul>
-    </nav>
+    <a href="report.html">report</a>
+    <a href="my_report.html">My Reports</a>
+    <div id="profile">
+      <p><strong>Name:</strong> <span id="name"></span></p>
+      <p><strong>Username:</strong> <span id="username"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Points:</strong> <span id="points"></span></p>
+      <p><strong>Badges:</strong> <span id="badges"></span></p>
+
+      <input id="edit-name" placeholder="New name" />
+      <input id="edit-username" placeholder="New username" />
+      <button id="save-changes">Save Changes</button>
+    </div>
+
+</div>
+
+
   </div>
 
-  <script src="../Js/citizen.js"></script>
+  <script type="module" src="../Js/citizen.js"></script>
 </body>
 </html>
