@@ -208,3 +208,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (newUsername) document.getElementById('username').textContent = newUsername
   })
 })
+
+// side bar responsive
+
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menuToggle');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    toggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+
+    navItems.forEach(item =>
+      item.addEventListener('click', e => {
+        e.preventDefault();
+        navItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      })
+    );
+
+    document.addEventListener('click', e => {
+      if (window.innerWidth <= 768 && !sidebar.contains(e.target) && !toggle.contains(e.target))
+        sidebar.classList.remove('active');
+    });

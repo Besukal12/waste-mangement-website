@@ -5,29 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <link rel="stylesheet" href="../Assets/CSS/citizen.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
-  <div class="container">
-    <a href="report.html">report</a>
-    <a href="my_report.html">My Reports</a>
-    <div id="profile">
-      <p><strong>Name:</strong> <span id="name"></span></p>
-      <p><strong>Username:</strong> <span id="username"></span></p>
-      <p><strong>Email:</strong> <span id="email"></span></p>
-      <p><strong>Points:</strong> <span id="points"></span></p>
-      <p><strong>Badges:</strong> <span id="badges"></span></p>
 
-      <input id="edit-name" placeholder="New name" />
-      <input id="edit-username" placeholder="New username" />
-      <button id="save-changes">Save Changes</button>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="user-avatar">RS</div>
+      <div class="user-info">
+        <h3 id="name"></h3>
+        <p id="username"></p>
+        <p id="email"></p>
+      </div>
     </div>
 
-</div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <h4>Main</h4>
+        <a href="#" class="nav-item active">
+          <i class="fas fa-th-large"></i><span>Dashboard</span>
+        </a>
+      </div>
+      <div class="nav-section nav-section1">
+        <h4>Edit Your Name</h4>
+        <div class="header-action">
+          <div class="search-box">
+              <input id="edit-name" placeholder="New name" />
+              <input id="edit-username" placeholder="New username" />
+              <button id="save-changes">Save Changes</button>
+          </div>
+        </div>
+      </div>
+      <div class="nav-section">
+        <h4>Management</h4>
+        <a href="report.html" class="nav-item"><i class="fas fa-box"></i><span>New Report</span></a>
+        <a href="my_report.html" class="nav-item"><i class="fas fa-tags"></i><span>My Reports</span></a>
+        <a href="#" class="nav-item"><i class="fas fa-shopping-cart"></i><span>Orders</span></a>
+        <a href="#" class="nav-item"><i class="fas fa-users"></i><span>Customers</span></a>
+      </div>
+      <div class="nav-section">
+        <h4>Other</h4>
+        <a href="#" class="nav-item"><i class="fas fa-percent"></i><span>Sales Offers</span></a>
+        <a href="#" class="nav-item"><i class="fas fa-sitemap"></i><span>Hierarchy</span></a>
+        <a href="#" class="nav-item"><i class="fas fa-map-marker-alt"></i><span>Locations</span></a>
+        <a href="#" class="nav-item"><i class="fas fa-cog"></i><span>Settings</span></a>
+      </div>
+    </nav>
 
-
+    <div class="sidebar-footer">
+      <button class="logout-btn" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i><span>Log Out</span>
+      </button>
+    </div>
   </div>
+
+  <div class="main-content">
+    <div class="header">
+      <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Dashboard</h1>
+      <div class="header-actions">
+        <div class="user-menu">
+          <div class="notification-icon">
+            <i class="fas fa-bell"></i>
+            <div class="notification-badge" id="badges"></div>
+          </div>
+          <div class="user-avatar" id="points"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script type="module" src="../Js/citizen.js"></script>
 </body>
