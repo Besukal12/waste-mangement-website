@@ -176,9 +176,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Show on page
   document.getElementById('name').textContent = data.name
   document.getElementById('username').textContent = data.username
-  document.getElementById('points').textContent = data.points
-  document.getElementById('badges').textContent = data.badges
   document.getElementById('email').textContent = user.email
+  document.getElementById('points').textContent = data.points
+  document.getElementById("badges").textContent =  data.badges
 
   // Update name/username
   document.getElementById('save-changes').addEventListener('click', async () => {
